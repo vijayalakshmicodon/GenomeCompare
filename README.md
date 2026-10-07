@@ -85,7 +85,6 @@ GenomeCompare/
 │   ├── gc_comparison.png
 │   ├── genome_length_comparison.png
 │   ├── nucleotide_comparison.png
-│   └── codon_usage.png
 │
 ├── src/
 │   ├── genome_analysis.py
