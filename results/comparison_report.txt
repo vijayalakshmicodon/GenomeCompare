@@ -1,24 +1,6 @@
 GenomeCompare Analysis Report
 ===================================
 
-Genome: NC_000913.3
-Genome Length: 4,641,652 bp
-GC Content: 50.79%
-Nucleotide Counts:
-  A: 1,142,742
-  T: 1,141,382
-  G: 1,177,437
-  C: 1,180,091
-
-Genome: NC_000964.3
-Genome Length: 4,215,606 bp
-GC Content: 43.51%
-Nucleotide Counts:
-  A: 1,188,073
-  T: 1,193,137
-  G: 915,112
-  C: 919,284
-
 Genome: NC_002516.2
 Genome Length: 6,264,404 bp
 GC Content: 66.56%
@@ -30,5 +12,5 @@ Nucleotide Counts:
 
 Comparison Summary
 -------------------------
-Genome length range: 2,048,798 bp
-GC content range: 23.04 percentage points
+Genome length range: 0 bp
+GC content range: 0.00 percentage points

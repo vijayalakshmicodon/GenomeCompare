@@ -1,3 +1,5 @@
+from src.codon_analysis import get_codon_counts, get_codon_usage
+
 from pathlib import Path
 
 from src.genome_analysis import (
@@ -126,11 +128,13 @@ if __name__ == "__main__":
     for genome_file in genome_files:
         genome = read_genome(genome_file)
 
-        results[genome["id"]] = {
-            "length": genome_length(genome["sequence"]),
-            "gc_content": gc_content(genome["sequence"]),
-            "nucleotide_counts": nucleotide_counts(genome["sequence"])
-        }
+    results[genome["id"]] = {
+        "length": genome_length(genome["sequence"]),
+        "gc_content": gc_content(genome["sequence"]),
+        "nucleotide_counts": nucleotide_counts(genome["sequence"]),
+        "codon_counts": get_codon_counts(genome["sequence"]),
+        "codon_usage": get_codon_usage(genome["sequence"])
+    }
 
     differences = calculate_differences(results)
 

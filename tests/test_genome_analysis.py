@@ -1,3 +1,5 @@
+from src.codon_analysis import get_codon_counts, get_codon_usage
+
 import unittest
 
 from src.genome_analysis import (
@@ -83,6 +85,22 @@ class TestGenomeAnalysis(unittest.TestCase):
             10.0
         )
 
+
+    def test_codon_counts(self):
+        sequence = "ATGGCCATGGCC"
+
+        counts = get_codon_counts(sequence)
+
+        self.assertEqual(counts["ATG"], 2)
+        self.assertEqual(counts["GCC"], 2)
+
+    def test_codon_usage(self):
+        sequence = "ATGGCCATGGCC"
+
+        usage = get_codon_usage(sequence)
+
+        self.assertAlmostEqual(usage["ATG"], 50.0)
+        self.assertAlmostEqual(usage["GCC"], 50.0)
 
 if __name__ == "__main__":
     unittest.main()
